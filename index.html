@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="app">
+        <div id="control">
+            <button onclick="toFirstStep()">Prev</button>
+            <button onclick="toSecondStep()">Next</button>
+        </div>
+        <div id="wrapFirst">
+            <form id="formToFirstStep" name="firstStep">
+                <div>
+                    <span>Much you car can make?</span>
+                </div>
+                <div>
+                    <label for="make">Make</label>
+                    <select name="make" id="make" required>
+                    </select>
+                </div>
+                <div>
+                    <label for="model">Model</label>
+                    <select name="model" id="model" required>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="year">Year</label>
+                    <input type="number" min="1900" id="year" max="2099" step="1" value="2016" required />
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div>
+                    <input type="checkbox" name="isClean" id="isClean">
+                    <label id="isClean" for="isClean">My car has a clean title</label>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="wrapSecond">
+            <form id="formToSecondStep" name="secondStep">
+                <div>
+                    <span> second wrap</span>
+                </div>
+                <div>
+                    <label for="date">Date</label>
+                    <input type="date" name="date" id="date" required>
+                </div>
+                <div>
+                    <label for="time">Time</label>
+                    <input type="time" name="time" id="time" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
